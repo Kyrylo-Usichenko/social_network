@@ -1,0 +1,168 @@
+$first-color: #20232a;
+$second-color: #61dafb;
+$third-color: #373940;
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: #edeef0;
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+a{
+  background-color: white;
+  &:hover{
+    color: $second-color;
+  }
+}
+
+.header {
+  background-color: $first-color;
+  width: 100%;
+  height: 70px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: 70px;
+  }
+}
+
+.container {
+  max-width: 1070px;
+  padding: 0 15px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.logo {
+display: flex;
+  align-items: center;
+  &__wrapper {
+    width: 195px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    width: 60px;
+    height: 48px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    width: 60px;
+    height: 48px;
+    color: $second-color;
+    margin-left: 15px;
+    background-color: $first-color;
+  }
+}
+
+.search {
+  border: 0;
+  box-sizing: border-box;
+  margin: 10px 0;
+  height: 28px;
+  line-height: 16px;
+  width: 230px;
+  border-radius: 14px;
+  transition: background-color .05s, color .05s;
+  padding-left: 19px;
+  border-left: 8px solid transparent;
+  background: $first-color;
+  outline: none;
+  font-size: 13px;
+  color: white;
+  position: relative;
+
+  &__wrapper {
+    width: 230px;
+    height: 50px;
+    position: relative;
+  }
+
+  &:focus {
+    background-color: $third-color;
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    margin-top: 17px;
+    margin-left: 7px;
+    left: 0;
+  }
+}
+
+.notification {
+  width: 60px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+
+  &:hover {
+    background: $third-color;
+    transition: all .3s;
+  }
+
+  &__bell {
+    color: white;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.profile {
+  width: 530px;
+  height: 48px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 15px;
+  background-color: $first-color;
+  &__avatar{
+    background-color: $first-color;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 50%;
+    margin-left: 15px;
+  }
+}
