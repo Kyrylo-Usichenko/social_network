@@ -8,7 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
   height: 100%;
-  color: white;
+  color: black;
   background-color: #edeef0;
 }
 
@@ -39,7 +39,8 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 a{
-  background-color: white;
+  color: black;
+  text-decoration: none;
   &:hover{
     color: $second-color;
   }
@@ -49,6 +50,7 @@ a{
   background-color: $first-color;
   width: 100%;
   height: 70px;
+
   &__inner {
     display: flex;
     align-items: center;
@@ -83,7 +85,6 @@ display: flex;
     width: 60px;
     height: 48px;
     color: $second-color;
-    margin-left: 15px;
     background-color: $first-color;
   }
 }
@@ -98,6 +99,7 @@ display: flex;
   border-radius: 14px;
   transition: background-color .05s, color .05s;
   padding-left: 19px;
+  padding-right: 30px;
   border-left: 8px solid transparent;
   background: $first-color;
   outline: none;
@@ -124,6 +126,16 @@ display: flex;
     margin-top: 17px;
     margin-left: 7px;
     left: 0;
+  }
+  &__clear{
+    width: 14px;
+    height: 14px;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    margin-top: 17px;
+    margin-left: 7px;
+    right: 10px;
   }
 }
 
@@ -165,4 +177,57 @@ display: flex;
     border-radius: 50%;
     margin-left: 15px;
   }
+}
+.my-profile{
+  margin-top: 20px;
+  &__inner{
+    display: flex;
+  }
+  &__avatar{
+    background-color: $first-color;
+    padding: 15px;
+    margin: 0 10px 10px 0;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+   &-img{
+     width: 200px;
+     height: 200px;
+     overflow: hidden;
+   }
+  }
+  &__edit{
+    background: $third-color;
+    border: none;
+    color: white;
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 20px;
+    padding: 6px 70px;
+    border-radius: 4px;
+    &:hover{
+      color: $second-color;
+    }
+  }
+}
+
+.navigation{
+  width: 17%;
+  &__list{
+    list-style: none;
+  }
+  &__item{
+    text-align: left;
+    padding: 5px 0px;
+    &:first-child{
+      padding-top: 0;
+    }
+  }
+}
+.first-column{
+  width: 245px;
+}
+
+.second-column{
+  width: 575px;
 }
