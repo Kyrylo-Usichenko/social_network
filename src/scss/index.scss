@@ -177,6 +177,9 @@ display: flex;
     border-radius: 50%;
     margin-left: 15px;
   }
+  &__name{
+    color: white;
+  }
 }
 .my-profile{
   margin-top: 20px;
@@ -186,7 +189,7 @@ display: flex;
   &__avatar{
     background-color: $first-color;
     padding: 15px;
-    margin: 0 10px 10px 0;
+    margin: 10px 10px 10px 0;
     border-radius: 3px;
     display: flex;
     flex-direction: column;
@@ -209,11 +212,59 @@ display: flex;
       color: $second-color;
     }
   }
+  &__information{
+    background-color: #fff;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 3px;
+    text-align: left;
+    box-shadow: rgb(215,216,219) 0 1px 0 0, rgb(227,228,232) 0 0 0 1px;
+  }
 }
+.information{
+  &__show-more{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px 0px;
+    cursor: pointer;
+    border-radius: 3px;
+    &:hover{
+      background: $third-color;
+      transition: all 1s ease 0s;
+      color: $second-color;
+    }
+  }
+  &__content{
+    margin-top: 10px;
+    &-line{
+      display: flex;
+      padding-top: 10px;
+    }
+    &-property{
+      font-size: 13px;
+      width: 40%;
+    }
+    &-value{
+      width: 80%;
+      font-size: 13px;
+      margin-left: 5%;
+    }
+  }
+  &__full{
 
+    padding: 20px 0;
+  }
+  &__title{
+    font-size: 14px;
+    margin: 20px 0;
+  }
+}
 .navigation{
   width: 17%;
   &__list{
+    margin-top: 20px;
     list-style: none;
   }
   &__item{
@@ -230,4 +281,7 @@ display: flex;
 
 .second-column{
   width: 575px;
+}
+.information__more{
+  display: none;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import {FaReact, FaSearch, FaBell, FaTimes} from "react-icons/fa";
-import avatar from '../../images/2.jpg'
+import avatar from '../../images/avatar.jpg'
 
 class Header extends React.Component {
 
@@ -13,7 +13,7 @@ class Header extends React.Component {
 
     updateInputValue = (event) => {
         this.setState({searchInputValue: event.target.value})
-        console.log(this.state)
+
     }
 
     clearInputValue = () => {
@@ -43,7 +43,7 @@ class Header extends React.Component {
 
                         </div>
                         <div className='profile'>
-                            <span>Kirill</span>
+                            <span className='profile__name'>Kirill</span>
                             <img className='profile__avatar' src={avatar} alt=""/>
 
 
