@@ -1,5 +1,6 @@
 import React from 'react';
 import {FaReact, FaSearch, FaBell, FaTimes} from "react-icons/fa";
+import s from './Header.module.scss'
 import avatar from '../../images/avatar.jpg'
 
 class Header extends React.Component {
@@ -23,30 +24,28 @@ class Header extends React.Component {
 
     render() {
         return (
-            <div className='header'>
+            <div className={s.header}>
                 <div className="container">
-                    <div className="header__inner">
+                    <div className={s.header__inner}>
 
-                        <div className="logo__wrapper">
-                            <a className='logo__link' href="/">
-                                <FaReact className='logo__img'/>
+                        <div className={s.logo__wrapper}>
+                            <a className={s.logo__link} href="/">
+                                <FaReact className={s.logo__img}/>
                             </a>
                         </div>
-                        <div className="search__wrapper">
-                            <input className='search' placeholder='search' value={this.state.searchInputValue}
+                        <div className={s.search__wrapper}>
+                            <input className={s.search} placeholder='search' value={this.state.searchInputValue}
                                    onChange={this.updateInputValue}/>
-                            <FaSearch className='search__icon'/>
-                            <FaTimes className='search__clear' onClick={this.clearInputValue}/>
+                            <FaSearch className={s.search__icon}/>
+                            <FaTimes className={s.search__clear} onClick={this.clearInputValue}/>
                         </div>
-                        <div className='notification'>
-                            <FaBell className='notification__bell'/>
+                        <div className={s.notification}>
+                            <FaBell className={s.notification__bell}/>
 
                         </div>
-                        <div className='profile'>
-                            <span className='profile__name'>Kirill</span>
-                            <img className='profile__avatar' src={avatar} alt=""/>
-
-
+                        <div className={s.profile}>
+                            <span className={s.profile__name}>Kirill</span>
+                            <img className={s.profile__avatar} src={avatar} alt=""/>
                         </div>
                     </div>
                 </div>

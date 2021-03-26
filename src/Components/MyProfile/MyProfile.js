@@ -1,6 +1,8 @@
 import React from 'react';
-import Navigation from "../Navigation/Navigation";
+import Navigation from "../Navigation/Navigation"
+import s from './MyProfile.module.scss'
 import avatar from '../../images/avatar.jpg'
+import MyPosts from "./MyPosts/MyPosts"
 
 class MyProfile extends React.Component {
 
@@ -19,30 +21,30 @@ class MyProfile extends React.Component {
 
     render() {
         return (
-            <div className='my-profile'>
+            <div className={s.myProfile}>
                 <div className='container'>
-                    <div className='my-profile__inner'>
+                    <div className={s.myProfile__inner}>
                         <Navigation/>
-                        <div className='first-column'>
-                            <div className='my-profile__avatar'>
-                                <img className='my-profile__avatar-img' src={avatar} alt='/'/>
-                                <button className='my-profile__edit'>Edit</button>
+                        <div className={s.firstColumn}>
+                            <div className={s.myProfile__avatar}>
+                                <img className={s.myProfile__avatarImg} src={avatar} alt='/'/>
+                                <button className={s.myProfile__edit}>Edit</button>
                             </div>
                         </div>
-                        <div className='second-column'>
-                            <div className='my-profile__information'>
-                                <h3 className='information__name'>Kirill Usichenko</h3>
-                                <p className='information__status'>my clever status</p>
-                                <div className='information__content'>
-                                    <div className='information__content-line'>
-                                        <div className='information__content-property'>Birthday:</div>
-                                        <span className='information__content-value'>10.12.2001</span>
+                        <div className={s.secondColumn}>
+                            <div className={s.myProfile__information}>
+                                <h3 className={s.information__name}>Kirill Usichenko</h3>
+                                <p className={s.information__status}>my clever status</p>
+                                <div className={s.information__content}>
+                                    <div className={s.information__contentLine}>
+                                        <div className={s.information__contentProperty}>Birthday:</div>
+                                        <span className={s.information__contentValue}>10.12.2001</span>
                                     </div>
-                                    <div className='information__content-line'>
-                                        <div className='information__content-property'>Current city:</div>
-                                        <span className='information__content-value'>Kyiv</span>
+                                    <div className={s.information__contentLine}>
+                                        <div className={s.information__contentProperty}>Current city:</div>
+                                        <span className={s.information__contentValue}>Kyiv</span>
                                     </div>
-                                    <div className='information__show-more' onClick={this.openFunction}>
+                                    <div className={s.information__showMore} onClick={this.openFunction}>
                                         {
                                             !this.state.showMore
                                                 ? <div>Show full information</div>
@@ -51,24 +53,24 @@ class MyProfile extends React.Component {
                                     {
                                         !this.state.showMore
                                             ? null
-                                            : <div className='information__full'>
-                                                <div className='information__title'>main information</div>
-                                                <div className='information__content-line'>
-                                                    <div className='information__content-property'>Hometown:</div>
-                                                    <span className='information__content-value'>Cherkasy</span>
+                                            : <div className={s.information__full}>
+                                                <div className={s.information__title}>main information</div>
+                                                <div className={s.information__contentLine}>
+                                                    <div className={s.information__contentProperty}>Hometown:</div>
+                                                    <span className={s.information__contentValue}>Cherkasy</span>
                                                 </div>
-                                                <div className='information__content-line'>
-                                                    <div className='information__content-property'>Languages:</div>
-                                                    <span className='information__content-value'>Russian</span>
+                                                <div className={s.information__contentLine}>
+                                                    <div className={s.information__contentProperty}>Languages:</div>
+                                                    <span className={s.information__contentValue}>Russian</span>
                                                 </div>
-                                                <div className='information__title'>Personal information</div>
-                                                <div className='information__content-line'>
-                                                    <div className='information__content-property'>Favorite quotes:</div>
-                                                    <span className='information__content-value'>"Programming isn't about what you know; it's about what you can figure out.” </span>
+                                                <div className={s.information__title}>Personal information</div>
+                                                <div className={s.information__contentLine}>
+                                                    <div className={s.information__contentProperty}>Favorite quotes:</div>
+                                                    <span className={s.information__contentValue}>"Programming isn't about what you know; it's about what you can figure out.” </span>
                                                 </div>
-                                                <div className='information__content-line'>
-                                                    <div className='information__content-property'>Groups:</div>
-                                                    <span className='information__content-value'>PiterJS,Flickr,Piter Css,Meduza</span>
+                                                <div className={s.information__contentLine}>
+                                                    <div className={s.information__contentProperty}>Groups:</div>
+                                                    <span className={s.information__contentValue}>PiterJS,Flickr,Piter Css,Meduza</span>
                                                 </div>
                                             </div>
                                     }
@@ -76,9 +78,9 @@ class MyProfile extends React.Component {
 
                                 </div>
                             </div>
-                            <div className='my-profile__my-photos'>my-photos</div>
-                            <div className='my-profile__new-post'>new-post</div>
-                            <div className='my-profile__posts'>posts</div>
+                            <div className='myProfile__my-photos'>my-photos</div>
+                            <div className='myProfile__new-post'>new-post</div>
+                            <MyPosts/>
 
                         </div>
                     </div>

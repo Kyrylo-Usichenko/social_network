@@ -1,0 +1,92 @@
+@import "./../../scss/vars";
+.myProfile{
+  margin-top: 20px;
+  &__inner{
+    display: flex;
+  }
+  &__avatar{
+    background-color: $first-color;
+    padding: 15px;
+    margin: 10px 10px 10px 0;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    &Img{
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+    }
+  }
+  &__edit{
+    background: $third-color;
+    border: none;
+    color: white;
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 20px;
+    padding: 6px 70px;
+    border-radius: 4px;
+    &:hover{
+      color: $second-color;
+    }
+  }
+  &__information{
+    background-color: #fff;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 3px;
+    text-align: left;
+    box-shadow: rgb(215,216,219) 0 1px 0 0, rgb(227,228,232) 0 0 0 1px;
+  }
+}
+.information{
+  &__showMore{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px 0px;
+    cursor: pointer;
+    border-radius: 3px;
+    &:hover{
+      background: $third-color;
+      transition: all 1s ease 0s;
+      color: $second-color;
+    }
+  }
+  &__content{
+    margin-top: 10px;
+    &Line{
+      display: flex;
+      padding-top: 10px;
+    }
+    &Property{
+      font-size: 13px;
+      width: 40%;
+    }
+    &Value{
+      width: 80%;
+      font-size: 13px;
+      margin-left: 5%;
+    }
+  }
+  &__full{
+
+    padding: 20px 0;
+  }
+  &__title{
+    font-size: 14px;
+    margin: 20px 0;
+  }
+}
+
+.firstColumn{
+  width: 245px;
+}
+
+.secondColumn{
+  width: 575px;
+}
+.information__more{
+  display: none;
+}

@@ -1,0 +1,14 @@
+.navigation{
+  width: 17%;
+  &__list{
+    margin-top: 20px;
+    list-style: none;
+  }
+  &__item{
+    text-align: left;
+    padding: 5px 0px;
+    &:first-child{
+      padding-top: 0;
+    }
+  }
+}
