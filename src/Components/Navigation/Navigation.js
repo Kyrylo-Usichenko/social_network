@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './Navigation.module.scss'
+import {NavLink} from "react-router-dom";
 
 class Navigation extends React.Component {
 
@@ -7,16 +8,17 @@ class Navigation extends React.Component {
         return (
             <div className={s.navigation}>
                 <ul className={s.navigation__list}>
-                    <li className={s.navigation__item}><a href='/' className={s.navigation__link}> My profile </a></li>
-                    <li className={s.navigation__item}><a href='/' className={s.navigation__link}>News</a></li>
-                    <li className={s.navigation__item}><a href='/' className={s.navigation__link}>Messages</a></li>
-                    <li className={s.navigation__item}><a href='/' className={s.navigation__link}>Friends</a></li>
-                    <li className={s.navigation__item}><a href='/' className={s.navigation__link}>Communities</a></li>
-                    <li className={s.navigation__item}><a href='/' className={s.navigation__link}>Photos</a></li>
-                    <li className={s.navigation__item}><a href='/' className={s.navigation__link}>Music</a></li>
-                    <li className={s.navigation__item}><a href='/' className={s.navigation__link}>Videos</a></li>
+                    <li className={s.navigation__item}><NavLink to='/myProfile' className={s.navigation__link}> My profile </NavLink></li>
+                    <li className={s.navigation__item}><NavLink to='/dialogs' className={s.navigation__link}  >Dialogs</NavLink></li>
+                    {/*<li className={s.navigation__item}><NavLink href='/myprofile' className={s.navigation__link}>Messages</NavLink></li>*/}
+                    {/*<li className={s.navigation__item}><NavLink href='/myprofile' className={s.navigation__link}>Friends</NavLink></li>*/}
+                    {/*<li className={s.navigation__item}><NavLink href='/myprofile' className={s.navigation__link}>Communities</NavLink></li>*/}
+                    {/*<li className={s.navigation__item}><NavLink href='/myprofile' className={s.navigation__link}>Photos</NavLink></li>*/}
+                    {/*<li className={s.navigation__item}><NavLink href='/myprofile' className={s.navigation__link}>Music</NavLink></li>*/}
+                    {/*<li className={s.navigation__item}><NavLink href='/myprofile' className={s.navigation__link}>Videos</NavLink></li>*/}
                 </ul>
             </div>
+
         );
     }
 }

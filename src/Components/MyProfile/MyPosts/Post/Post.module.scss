@@ -1,33 +1,65 @@
 @import "./../../../../scss/vars";
 
-.item{
+.item {
   background-color: $first-color;
   color: white;
   animation: 0.4s ease-in-out 0s 1 normal none running top;
   margin: 10px 0px;
   border-radius: 3px;
-  box-shadow: rgb(215,216,219) 0 1px 0 0, rgb(227,228,232) 0 0 0 1px;
+  box-shadow: rgb(215, 216, 219) 0 1px 0 0, rgb(227, 228, 232) 0 0 0 1px;
   padding: 10px 15px 5px;
 }
-.profile{
+
+.profile {
   display: flex;
   align-items: center;
 }
-.avatar{
+
+.avatar {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin: 5px;
 }
 
-.name{
-color: white;
+.name {
+  color: white;
   text-decoration: none;
   cursor: pointer;
   font-size: 12px;
   font-weight: bold;
   margin-left: 10px;
-  &:hover{
+
+  &:hover {
     color: $second-color;
+  }
+}
+
+.content {
+  font-size: 14px;
+  line-height: 1.5em;
+  color: white;
+
+  &__wrapper {
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.like {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  &__wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(74, 118, 168);
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './Post.module.scss'
 import avatar from './../../../../images/avatar.jpg'
+import {AiOutlineLike} from 'react-icons/ai';
 
 const Post = (props) => {
 
@@ -8,11 +9,13 @@ const Post = (props) => {
         <div className={s.item}>
             <div className={s.profile}>
                 <img className={s.avatar} src={avatar} alt='/'/>
-                <a className={s.name} href='/' >Kirill Usichenko</a>
+                <a className={s.name} href='/'>Kirill Usichenko</a>
             </div>
-            post 1
-            <div>
-                <span>like</span>
+            <div className={s.content__wrapper}>
+                <p className={s.content}>{props.message}</p>
+            </div>
+            <div className={s.like__wrapper}>
+                <AiOutlineLike className={s.like}/>
             </div>
         </div>
     )

@@ -1,3 +1,4 @@
+@import "./../../scss/vars";
 .navigation{
   width: 17%;
   &__list{
@@ -10,5 +11,7 @@
     &:first-child{
       padding-top: 0;
     }
+
   }
 }
+

@@ -1,5 +1,4 @@
 import React from 'react';
-import Navigation from "../Navigation/Navigation"
 import s from './MyProfile.module.scss'
 import avatar from '../../images/avatar.jpg'
 import MyPosts from "./MyPosts/MyPosts"
@@ -22,9 +21,9 @@ class MyProfile extends React.Component {
     render() {
         return (
             <div className={s.myProfile}>
-                <div className='container'>
+
                     <div className={s.myProfile__inner}>
-                        <Navigation/>
+
                         <div className={s.firstColumn}>
                             <div className={s.myProfile__avatar}>
                                 <img className={s.myProfile__avatarImg} src={avatar} alt='/'/>
@@ -84,7 +83,7 @@ class MyProfile extends React.Component {
 
                         </div>
                     </div>
-                </div>
+
             </div>
         )
     }
