@@ -4,7 +4,6 @@ import MyProfile from "./Components/MyProfile/MyProfile"
 import './scss/index.scss'
 import Navigation from "./Components/Navigation/Navigation";
 import Dialogs from "./Components/Dialogs/Dialogs";
-
 import {BrowserRouter, Route} from "react-router-dom"
 
 
