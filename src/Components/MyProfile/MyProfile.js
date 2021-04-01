@@ -3,6 +3,7 @@ import s from './MyProfile.module.scss'
 import avatar from '../../images/avatar.jpg'
 import MyPosts from "./MyPosts/MyPosts"
 
+
 const СontentRow = (props) => {
     return (
         <div className={s.information__contentLine}>
@@ -13,6 +14,7 @@ const СontentRow = (props) => {
 }
 
 class MyProfile extends React.Component {
+
 
     constructor(props) {
         super(props);
@@ -28,7 +30,10 @@ class MyProfile extends React.Component {
     }
 
     render() {
+
+
         return (
+
             <div className={s.myProfile}>
 
                 <div className={s.myProfile__inner}>
@@ -73,7 +78,8 @@ class MyProfile extends React.Component {
                             </div>
                         </div>
                         <div className='myProfile__my-photos'>my-photos</div>
-                        <MyPosts/>
+
+                        <MyPosts posts={this.props.posts} />
 
                     </div>
                 </div>
