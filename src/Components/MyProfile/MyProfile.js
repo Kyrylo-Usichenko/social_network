@@ -2,6 +2,7 @@ import React from 'react';
 import s from './MyProfile.module.scss'
 import avatar from '../../images/avatar.jpg'
 import MyPosts from "./MyPosts/MyPosts"
+import {updateNewPostText} from "../../redux/state";
 
 
 const СontentRow = (props) => {
@@ -79,7 +80,10 @@ class MyProfile extends React.Component {
                         </div>
                         <div className='myProfile__my-photos'>my-photos</div>
 
-                        <MyPosts posts={this.props.posts} />
+                        <MyPosts posts={this.props.profilePage.posts}
+                                 newPostText={this.props.profilePage.newPostText}
+                                 updateNewPostText={this.props.updateNewPostText}
+                                 addPost={this.props.addPost} />
 
                     </div>
                 </div>
