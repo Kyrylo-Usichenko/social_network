@@ -7,7 +7,7 @@ import { Route} from "react-router-dom"
 
 
 function App(props) {
-
+    console.log(props.state)
     return (
 
         <div className="App">

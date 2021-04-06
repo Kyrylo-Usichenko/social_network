@@ -2,7 +2,7 @@ import React from 'react';
 import s from './MyProfile.module.scss'
 import avatar from '../../images/avatar.jpg'
 import MyPosts from "./MyPosts/MyPosts"
-import {updateNewPostText} from "../../redux/state";
+
 
 
 const СontentRow = (props) => {
