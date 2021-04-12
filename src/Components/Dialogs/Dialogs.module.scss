@@ -1,3 +1,38 @@
 .dialogs{
   display: flex;
+  width: 100%;
+}
+
+.dialogs__items{
+  border: 1px solid #eee;
+  width: 22%;
+  margin-top: 18px;
+  background-color: #fff;
+  box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+}
+
+.messages{
+  background: #fff;
+  box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+  width: 100%;
+  min-height: 600px;
+  margin-top: 20px;
+ display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__form{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.textAreaWrapper{
+  width: 100%;
+}
+.newMessage{
+  width: 100%;
+  font-size: 12px;
+  padding: 6px;
+  min-height: 20px;
+  resize: none;
+ overflow: hidden;
 }

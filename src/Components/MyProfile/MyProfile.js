@@ -82,8 +82,7 @@ class MyProfile extends React.Component {
 
                         <MyPosts posts={this.props.profilePage.posts}
                                  newPostText={this.props.profilePage.newPostText}
-                                 updateNewPostText={this.props.updateNewPostText}
-                                 addPost={this.props.addPost} />
+                                 dispatch={this.props.dispatch}/>
 
                     </div>
                 </div>

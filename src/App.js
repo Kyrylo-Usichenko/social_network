@@ -3,11 +3,12 @@ import MyProfile from "./Components/MyProfile/MyProfile"
 import './scss/index.scss'
 import Navigation from "./Components/Navigation/Navigation";
 import Dialogs from "./Components/Dialogs/Dialogs";
-import { Route} from "react-router-dom"
+import {Route} from "react-router-dom"
 
 
 function App(props) {
-    console.log(props.state)
+
+    console.log(props.state.dialogsPage.newMessageText)
     return (
 
         <div className="App">
@@ -17,16 +18,17 @@ function App(props) {
                     <Navigation/>
                     <Route path='/myProfile' render={() => <MyProfile
                         profilePage={props.state.profilePage}
-                        updateNewPostText={props.updateNewPostText}
-                        addPost={props.addPost}
-                    />}/>
-                    <Route path='/dialogs' component={() => <Dialogs
-                        state={props.state.dialogsPage}/>}/>
+                        dispatch={props.dispatch}/>}/>
+                    <Route path='/dialogs'
+                           render={() => <Dialogs dialogsPage={props.state.dialogsPage}
+                                                  dispatch={props.dispatch}/>}
+                    />
                 </div>
             </div>
         </div>
 
     )
+
 }
 
 export default App;
