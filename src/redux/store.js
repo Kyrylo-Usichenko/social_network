@@ -1,9 +1,11 @@
-import profileReducer from "./profileReducer";
-import dialogsReducer from "./dialogsReducer";
-import navigationReducer from "./navigationReducer";
+import profileReducer from "./profile-reducer";
+import dialogsReducer from "./dialogs-reducer";
+import navigationReducer from "./navigation-reducer";
+import headerReducer from "./header-reducer";
 
 let store = {
     _state: {
+        headerElement: {newSearchText: ' '},
         profilePage: {
             posts: [
                 {id: 1, message: 'hi, guys. I\'m a new user'},
@@ -13,7 +15,7 @@ let store = {
                 {id: 5, message: 'Egor'},
                 {id: 6, message: 'Maksym'}
             ],
-            newPostText: ''
+            newPostText: ' '
 
         },
         dialogsPage: {
@@ -42,7 +44,7 @@ let store = {
     },
 
     dispatch(action) {
-
+        this._state.headerElement = headerReducer(this._state.headerElement, action)
         this._state.profilePage = profileReducer(this._state.profilePage, action)
         this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action)
         this._state.navigation = navigationReducer(this._state.navigation, action)

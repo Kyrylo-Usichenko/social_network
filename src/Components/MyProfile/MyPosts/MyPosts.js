@@ -2,7 +2,7 @@ import React from 'react'
 import s from './MyPosts.module.scss'
 import Post from "./Post/Post"
 import avatar from './../../../images/avatar.jpg'
-import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/profileReducer";
+import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/profile-reducer";
 
 
 

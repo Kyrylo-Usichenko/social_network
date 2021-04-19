@@ -3,7 +3,7 @@ import DialogItem from './DialogItem/DialogItem'
 import Message from './Message/Message'
 import {IoMdSend} from "react-icons/all";
 import React from "react";
-import {addMessageActionCreator, updateNewMessageTextActionCreator} from "../../redux/dialogsReducer";
+import {addMessageActionCreator, updateNewMessageTextActionCreator} from "../../redux/dialogs-reducer";
 
 
 const Dialogs = (props) => {

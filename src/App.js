@@ -6,13 +6,13 @@ import Dialogs from "./Components/Dialogs/Dialogs";
 import {Route} from "react-router-dom"
 
 
-function App(props) {
 
-    console.log(props.state.dialogsPage.newMessageText)
+
+function App(props) {
     return (
 
         <div className="App">
-            <Header/>
+            <Header headerElement={props.state.headerElement} dispatch={props.dispatch}/>
             <div className='container'>
                 <div className='appWrapperContent'>
                     <Navigation/>
