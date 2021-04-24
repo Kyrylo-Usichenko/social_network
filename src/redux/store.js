@@ -5,7 +5,7 @@ import headerReducer from "./header-reducer";
 
 let store = {
     _state: {
-        headerElement: {newSearchText: ' '},
+        headerElement: {newSearchText: ''},
         profilePage: {
             posts: [
                 {id: 1, message: 'hi, guys. I\'m a new user'},
@@ -15,7 +15,7 @@ let store = {
                 {id: 5, message: 'Egor'},
                 {id: 6, message: 'Maksym'}
             ],
-            newPostText: ' '
+            newPostText: ''
 
         },
         dialogsPage: {

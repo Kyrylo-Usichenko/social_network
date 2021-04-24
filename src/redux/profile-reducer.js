@@ -10,7 +10,7 @@ let initialState = {
         {id: 5, message: 'Egor'},
         {id: 6, message: 'Maksym'}
     ],
-    newPostText: ' '
+    newPostText: ''
 
 
 }

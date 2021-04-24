@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './MyProfile.module.scss'
 import avatar from '../../images/avatar.jpg'
-import MyPosts from "./MyPosts/MyPosts"
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 
 
@@ -79,11 +79,7 @@ class MyProfile extends React.Component {
                             </div>
                         </div>
                         <div className='myProfile__my-photos'>my-photos</div>
-
-                        <MyPosts posts={this.props.profilePage.posts}
-                                 newPostText={this.props.profilePage.newPostText}
-                                 dispatch={this.props.dispatch}/>
-
+                        <MyPostsContainer store={this.props.store} />
                     </div>
                 </div>
 
