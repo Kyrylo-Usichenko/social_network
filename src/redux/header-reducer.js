@@ -1,13 +1,23 @@
 const UPDATE_NEW_SEARCH_TEXT = 'UPDATE-NEW-SEARCH-TEXT'
+const CLEAR_SEARCH_TEXT = 'CLEAR-SEARCH-TEXT'
 let initialState = {
-    newSearchText: ' '
+    newSearchBody: ''
 }
 const headerReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case CLEAR_SEARCH_TEXT:
+            state.newSearchBody = ''
+            return state
+        case UPDATE_NEW_SEARCH_TEXT:
+            state.newSearchBody = action.newSearch
+            return state
+        default:
+            return state;
+    }
 
-    state.newSearchText = action.newSearch
-    return state
 }
 
 
 export const updateNewSearchTextActionCreator = (text) => ({type: UPDATE_NEW_SEARCH_TEXT, newSearch: text})
+export const clearNewSearchTextActionCreator = (text) => ({type: CLEAR_SEARCH_TEXT, newSearch: text})
 export default headerReducer

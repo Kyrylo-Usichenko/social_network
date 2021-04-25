@@ -2,22 +2,22 @@ import React from 'react';
 import {FaReact, FaSearch, FaBell, FaTimes} from "react-icons/fa"
 import s from './Header.module.scss'
 import avatar from '../../images/avatar.jpg'
-import {updateNewSearchTextActionCreator} from "../../redux/header-reducer"
+
 
 
 const Header = (props) => {
 
     let newSearchElement = React.createRef()
+
     let onSearchChange = () => {
         let text = newSearchElement.current.value
-        let action = updateNewSearchTextActionCreator(text)
-        props.dispatch(action)
+        props.onSearchChange(text)
     }
     let onClearClick = () => {
-        let text = ''
-        let action = updateNewSearchTextActionCreator(text)
-        props.dispatch(action)
+
+        props.onClearClick('')
     }
+
     return (
         <div className={s.header}>
             <div className="container">
@@ -30,7 +30,7 @@ const Header = (props) => {
                     </div>
                     <div className={s.search__wrapper}>
                         <input className={s.search} placeholder='search' ref={newSearchElement}
-                               onChange={onSearchChange} value={props.headerElement.newSearchText}/>
+                               onChange={onSearchChange} value={props.headerElement.newSearchBody}/>
                         <FaSearch className={s.search__icon}/>
                         <FaTimes className={s.search__clear} onClick={onClearClick}/>
                     </div>

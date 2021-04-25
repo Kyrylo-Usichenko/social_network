@@ -21,7 +21,6 @@ const MyPosts = (props) => {
 
     }
 
-
     return (
         <div className={s.wrapper}>
             <div className={s.newPost}>

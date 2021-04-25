@@ -79,7 +79,7 @@ class MyProfile extends React.Component {
                             </div>
                         </div>
                         <div className='myProfile__my-photos'>my-photos</div>
-                        <MyPostsContainer store={this.props.store} />
+                        <MyPostsContainer  />
                     </div>
                 </div>
 
