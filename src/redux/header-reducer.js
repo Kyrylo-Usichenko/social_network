@@ -6,11 +6,14 @@ let initialState = {
 const headerReducer = (state = initialState, action) => {
     switch (action.type) {
         case CLEAR_SEARCH_TEXT:
-            state.newSearchBody = ''
-            return state
+            return {
+                ...state,
+                newSearchBody: ''
+            };
         case UPDATE_NEW_SEARCH_TEXT:
-            state.newSearchBody = action.newSearch
-            return state
+            return {...state,
+                newSearchBody: action.newSearch
+            };
         default:
             return state;
     }
