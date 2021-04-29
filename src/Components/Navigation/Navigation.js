@@ -10,6 +10,7 @@ class Navigation extends React.Component {
                 <ul className={s.navigation__list}>
                     <li className={s.navigation__item}><NavLink to='/myProfile' className={s.navigation__link}> My profile </NavLink></li>
                     <li className={s.navigation__item}><NavLink to='/dialogs' className={s.navigation__link}  >Dialogs</NavLink></li>
+                    <li className={s.navigation__item}><NavLink to='/users' className={s.navigation__link}  >Users</NavLink></li>
                 </ul>
             </div>
         );

@@ -16,13 +16,12 @@ let initialState = {
 }
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_POST: {
+        case ADD_POST:
             return {
                 ...state,
                 posts: [...state.posts, {id: Math.random(), message: state.newPostText}],
                 newPostText: ''
             }
-        }
         case UPDATE_NEW_POST_TEXT:
             return {
                 ...state,
