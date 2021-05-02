@@ -3,3 +3,52 @@
   height: 128px;
   border-radius: 50%;
 }
+.userWindow{
+  display: flex;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  padding: 12px 25px;
+}
+
+.userInfo{
+  display: flex;
+  flex-direction: column;
+}
+
+.followButton{
+  padding: 7px 30px;
+  font-size: 14px;
+  display: inline-block;
+  zoom: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #5b88bd;
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  margin: 0 7px 0 12px;
+}
+
+.userName{
+  color: #2a5885;
+  font-size: 16px;
+  font-weight: 600;
+
+}
+
+.userLocation{
+  color: #2a5885;
+  font-size: 13px;
+
+  cursor: pointer;
+  opacity: .7;
+}
+.userStatus{
+  font-size: 12px;
+  color: rgb(34, 34, 34);
+  opacity: 0.7;
+  line-height: 1.5em;
+
+  border-bottom: 1px solid rgb(223, 230, 237);
+}
